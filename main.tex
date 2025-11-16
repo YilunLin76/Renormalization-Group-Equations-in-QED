@@ -45,7 +45,12 @@
 \newpage
 
 \section{Introduction}
-Quantum Electrodynamics (QED) is a renormalizable quantum field theory describing the interaction of charged fermions (customarily $spin=\frac{1}{2}$ ) with the electromagnetic field. A key feature of QED is that its effective coupling depends on the renormalization scale due to vacuum polarization. The Renormalization Group Equation (REG) allows us to track how the renormalized coupling evolves with energy. In this note, we derive the REG for QED and discuss the physical implications of running couplings. 
+Quantum Electrodynamics (QED) is a perturbatively well-defined quantum field theory, yet its perturbative expansion necessarily produces ultraviolet (UV) divergences in loop amplitudes. These divergences arise from integrations over arbitrarily high virtual momenta in Feynman graphs and reflect the fact that QED, viewed as a continuum field theory, possesses no intrinsic physical cutoff. Renormalization is therefore required in order to define finite Green's functions and physical observables.
+\newline 
+From a physical standpoint, renormalization reflects the fact that the parameters appearing in the bare Lagrangean (i.e. bare charge $e_{0}$, bare mass $m_{0}$, and the bare photon field normalization) are not directly measurable quantities. Instead, measurements probe effective parameters defined at a particular energy scale. The renormalization procedure systematically relates these scale-dependent effective parameters to the divergent bare parameters in such a way that all S-matrix elements remain finite.
+\newline
+The central observation is that divergences do not imply inconsistency. Rather, they indicate the need to reinterpret the parameters of the theory. The renormalization group (RG) then captures how these effective parameters evolve with changes of the renormalization scale. In QED, this scale dependence is physically meaningful that the running of the effective charge $e\left(\mu\right)$ describes the phenomenon of charge screening by virtual electron-positron pairs.
+
 \section{QED Lagrangean and Renormalization Setup}
 \subsection{Bare and renormalized quantitties}
 We start with the bare Lagrangean:
