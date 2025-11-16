@@ -45,5 +45,95 @@
 \newpage
 
 \section{Introduction}
+Quantum Electrodynamics (QED) is a renormalizable quantum field theory describing the interaction of charged fermions (customarily $spin=\frac{1}{2}$ ) with the electromagnetic field. A key feature of QED is that its effective coupling depends on the renormalization scale due to vacuum polarization. The Renormalization Group Equation (REG) allows us to track how the renormalized coupling evolves with energy. In this note, we derive the REG for QED and discuss the physical implications of running couplings. 
+\section{QED Lagrangean and Renormalization Setup}
+\subsection{Bare and renormalized quantitties}
+We start with the bare Lagrangean:
+\begin{equation}
+    \begin{split}
+        \mathcal{L}_{0}\,=\,-\frac{1}{4}F_{0\mu\nu}F_{0}^{\mu\nu}+\bar{\psi}_{0}\left(i\slashed{\partial}-m_{0}\right)\psi_{0}-e_{0}\bar{\psi}_{0}\gamma^{\mu}\psi_{0}A_{0\mu},
+    \end{split}
+\end{equation}
+where $\slashed{\partial}\,=\,\gamma^{\mu}\partial_{\mu}$.
+\newline Introduce renormalization constants:
+\begin{align}
+    \psi_{0} &= Z_{2}^{1/2}\psi, \\
+    A_{0\mu} &= Z_{3}^{1/2}A_{\mu}, \\
+    m_{0} &= Z_{m}m, \\
+    e_{0} &= Z_{e}e.
+\end{align}
+The renormalized Lagrangean can be written as:
+\begin{equation}
+    \begin{split}
+        \mathcal{L}_{0}\,=\,\mathcal{L}_{\text{ren}}\,+\,\mathcal{L}_{\text{ct}},
+    \end{split}
+\end{equation}
+where the counter-term Lagrangean is:
+\begin{equation}
+    \begin{split}
+        \mathcal{L}_{\text{ct}}\,&=\,-\frac{1}{4}\left(Z_{3}-1\right)F_{\mu\nu}F^{\mu\nu}+\left(Z_{2}-1\right)\bar{\psi}i\slashed{\partial}\psi \\
+        &\quad-\left(Z_{m}-1\right)m\bar{\psi}\psi-\left(Z_{1}-1\right)e\bar{\psi}\psi\gamma^{\mu}A_{\mu}.
+    \end{split}
+\end{equation}
+The Ward identity implies:
+\begin{equation}
+    \begin{split}
+        Z_{1}\,=\,Z_{2}.
+    \end{split}
+\end{equation}
+
+\section{One-Loop Corrections in QED}
+\subsection{Vacuum Polarization}
+The one-loop photon self-energy diagram (electron loop) contributes:
+\begin{equation}
+    \begin{split}
+        \Pi^{\mu\nu}\left(q\right)\,=\,\left(q^{\mu}q^{\nu}\,-\,q^{2}g^{\mu\nu}\right)\Pi\left(q^{2}\right),
+    \end{split}
+\end{equation}
+where
+\begin{equation}
+    \begin{split}
+        \Pi\left(q^{2}\right)\,=\,\frac{e^{2}}{12\pi^{2}}\left(\frac{2}{\epsilon}+\ln\frac{\mu^{2}}{m^{2}}+\cdots\right).
+    \end{split}
+\end{equation}
+Thus
+\begin{equation}
+    \begin{split}
+        Z_{3}\,=\,1-\frac{e^{2}}{6\pi^{2}}\frac{1}{\epsilon}.
+    \end{split}
+\end{equation}
+
+\begin{center}
+    \begin{tikzpicture}
+        \begin{feynman}
+            \diagram{
+            a -- [photon] b -- [photon] c,
+            b -- [fermion, half left, looseness = 1.0]b,
+            b -- [fermion, half right, looseness = 1.0]b,
+};
+        \end{feynman}
+    \end{tikzpicture}
+    Figure: Vacuum polarization in QED.
+\end{center}
+
+\subsection{Vertex correction}
+By Ward identity:
+\begin{equation}
+    \begin{split}
+        Z_{1}\,=\,Z_{2}.
+    \end{split}
+\end{equation}
+
+\section{Renormalization Group and Running Coupling}
+\subsection{General form of Callan--Symanzik equation}
+\begin{equation}
+    \begin{split}
+        \left(\mu\frac{\partial}{\partial \mu}\,+\,\beta\left(e\right)\frac{\partial}{\partial e}\,-\,n_{\psi}\gamma_{\psi}\,-\,n_{A}\gamma_{A}\right)\Gamma\,=\,0.
+    \end{split}
+\end{equation}
+
+\subsection{QED beta function}
+Since $Z_{e}\,=\,Z_{3}^{-1/2}$,
+
 
 \end{document}
