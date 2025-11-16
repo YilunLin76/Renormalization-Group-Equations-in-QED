@@ -67,25 +67,32 @@ where $\slashed{\partial}\,=\,\gamma^{\mu}\partial_{\mu}$.
     m_{0} &= Z_{m}m, \\
     e_{0} &= Z_{e}e.
 \end{align}
-The renormalized Lagrangean can be written as:
+Gauge invariance implies the Ward identity
 \begin{equation}
     \begin{split}
-        \mathcal{L}_{0}\,=\,\mathcal{L}_{\text{ren}}\,+\,\mathcal{L}_{\text{ct}},
+        Z_{1}\,=\,Z_{2},
     \end{split}
 \end{equation}
-where the counter-term Lagrangean is:
+where $Z_{1}$ is the vertex renormalization constant. This reduces the number of independent renormalization constants and guarantees charge renormalization is controlled entirely by the photon field renormalization
 \begin{equation}
     \begin{split}
-        \mathcal{L}_{\text{ct}}\,&=\,-\frac{1}{4}\left(Z_{3}-1\right)F_{\mu\nu}F^{\mu\nu}+\left(Z_{2}-1\right)\bar{\psi}i\slashed{\partial}\psi \\
-        &\quad-\left(Z_{m}-1\right)m\bar{\psi}\psi-\left(Z_{1}-1\right)e\bar{\psi}\psi\gamma^{\mu}A_{\mu}.
+        Z_{e}\,=\,Z_{3}^{-1/2}.
     \end{split}
 \end{equation}
-The Ward identity implies:
+Thus, the renormalized QED Lagrangean becomes
 \begin{equation}
     \begin{split}
-        Z_{1}\,=\,Z_{2}.
+        \mathcal{L}\,=\,&-\frac{1}{4}Z_{3}F_{\mu\nu}F^{\mu\nu}\,+\,Z_{2}\bar{\psi}i\gamma^{\mu}\partial_{\mu}\psi\, \\
+        &-\,Z_{m}m\bar{\psi}\psi\,+\,Z_{1}e\bar{\psi}\gamma^{\mu}\psi A_{\mu}.
     \end{split}
 \end{equation}
+The renormalization constants $Z_{i}$ are computed perturbatively by imposing renormalization conditions. In dimensional regularization with minimal subtraction, these renormalization constants take the form
+\begin{equation}
+    \begin{split}
+        Z_{i}\,=\,1+\Sigma_{k\geq1}\frac{a_{i}^{\left(k\right)}\left(e\right)}{\epsilon^{k}},
+    \end{split}
+\end{equation}
+where $\epsilon\,=\,4-d$.
 
 \section{One-Loop Corrections in QED}
 \subsection{Vacuum Polarization}
