@@ -116,16 +116,24 @@ Thus
 \end{equation}
 
 \begin{center}
-    \begin{tikzpicture}
-        \begin{feynman}
-            \diagram{
-            a -- [photon] b -- [photon] c,
-            b -- [fermion, half left, looseness = 1.0]b,
-            b -- [fermion, half right, looseness = 1.0]b,
-};
-        \end{feynman}
-    \end{tikzpicture}
-    Figure: Vacuum polarization in QED.
+\begin{tikzpicture}
+   \begin{feynman}
+       \vertex (L) at (-3.0,0) {};
+       \vertex (R) at (3.0,0) {};
+       \vertex (a) at (-1.0,0) {};
+       \vertex (b) at (1.0,0) {};
+       \vertex (top) at (0,1.2) {};
+       \vertex (bot) at (0,-1.2) {};
+       \diagram*{
+         (L) -- [photon, edge label=\(p\)] (a),
+         (a) -- [fermion, half left, looseness=1.6, edge label=\(k\)] (b),
+         (b) -- [fermion, half left, looseness=1.6, edge label'=\(k-p\)] (a),
+         (b) -- [photon, edge label=\(p\)] (R),
+       };
+   \end{feynman}
+\end{tikzpicture}
+\newline
+Figure: Vacuum polarization in QED.
 \end{center}
 
 \subsection{Vertex correction}
